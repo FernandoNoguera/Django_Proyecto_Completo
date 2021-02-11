@@ -120,3 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'  #carpeta que guardará las imagenes guardadas en servicio
+MEDIA_ROOT = BASE_DIR / 'media' #el directorio donde se encuentra la carpeta
