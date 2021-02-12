@@ -125,3 +125,12 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'  #carpeta que guardará las imagenes guardadas en servicio
 MEDIA_ROOT = BASE_DIR / 'media' #el directorio donde se encuentra la carpeta
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'correo.pruebas.desarrollo.200@gmail.com'
+EMAIL_HOST_PASSWORD = 'Pruebasdesarrollo200'
+

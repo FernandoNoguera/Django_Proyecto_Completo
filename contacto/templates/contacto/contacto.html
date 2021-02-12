@@ -3,6 +3,13 @@
 
 {% block content %}
     <div class="contenedorFormulario">
+        {% if "valido" in request.GET %}
+            <p style="color: antiquewhite; margin: 20px auto; text-align: center;">
+                Información enviada correctamente
+            </p>
+        {% endif %}
+
+
         <form action="" method="POST" style="text-align: center;">
             {% csrf_token %}
 
