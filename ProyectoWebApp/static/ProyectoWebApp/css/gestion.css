@@ -283,3 +283,11 @@ ul.errorlist{
   color: #ffffff !important;
   text-decoration: none !important;
 }
+.contenedorFormulario{
+  color: #ffffff !important;
+  background-color: #294c54 !important ;
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 1px 0px;
+}
