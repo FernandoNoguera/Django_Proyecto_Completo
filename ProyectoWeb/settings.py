@@ -156,4 +156,3 @@ EMAIL_HOST_PASSWORD = 'Pruebasdesarrollo200'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-django_heroku.settings(locals())
