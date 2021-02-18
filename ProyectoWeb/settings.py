@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'ProyectoWeb.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -90,18 +90,18 @@ DATABASES = {
     }
 }
 
-"""
-
-import dj_database_url
-from decouple import config
-
-DATABASES = {
-    'default': dj_database_url.config(
-        default = config('DATABASE_URL')
-    )
 
 
-}
+#import dj_database_url
+#from decouple import config
+#
+#DATABASES = {
+#    'default': dj_database_url.config(
+#        default = config('DATABASE_URL')
+#    )
+#
+#
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -153,6 +153,5 @@ EMAIL_HOST_USER = 'correo.pruebas.desarrollo.200@gmail.com'
 EMAIL_HOST_PASSWORD = 'Pruebasdesarrollo200'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 django_heroku.settings(locals())
