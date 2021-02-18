@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'ProyectoWeb.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -90,18 +90,18 @@ DATABASES = {
     }
 }
 
+"""
+
+import dj_database_url
+from decouple import config
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default = config('DATABASE_URL')
+    )
 
 
-#import dj_database_url
-#from decouple import config
-#
-#DATABASES = {
-#    'default': dj_database_url.config(
-#        default = config('DATABASE_URL')
-#    )
-#
-#
-#}
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -143,6 +143,8 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'  #carpeta que guardará las imagenes guardadas en servicio
 MEDIA_ROOT = BASE_DIR / 'media' #el directorio donde se encuentra la carpeta
+STATIC_ROOT = BASE_DIR / 'media'
+STATICFILES_DIRS = (BASE_DIR / 'static')
 
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
