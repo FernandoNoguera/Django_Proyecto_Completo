@@ -142,7 +142,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'  #carpeta que guardará las imagenes guardadas en servicio
-MEDIA_ROOT = BASE_DIR / 'media' #el directorio donde se encuentra la carpeta
+MEDIA_ROOT = BASE_DIR / 'staticfiles' #el directorio donde se encuentra la carpeta
 STATIC_ROOT = BASE_DIR / 'media'
 STATICFILES_DIRS = (BASE_DIR / 'static')
 
